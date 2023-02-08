@@ -1,7 +1,8 @@
 import axios from "axios"
 let dynamicRoutes = () => {
   const routes = axios
-    .get("https://css-tricks.com/wp-json/wp/v2/posts?page=1&per_page=20")
+    // .get("https://css-tricks.com/wp-json/wp/v2/posts?page=1&per_page=20")
+    .get("https://hilarious-nasturtium-8b0060.netlify.app/")
     .then(res => {
       return res.data.map(post => `/blog/${post.slug}`)
     })
